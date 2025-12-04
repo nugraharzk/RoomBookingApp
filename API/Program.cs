@@ -29,7 +29,7 @@ var connectionString = $"Host={dbHost};Port={dbPort};Database={dbName};Username=
 
 // Configure PostgreSQL
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(connectionString));
+    options.UseNpgsql(connectionString).UseSnakeCaseNamingConvention());
 
 // Get JWT settings from environment variables
 var jwtSecret = Environment.GetEnvironmentVariable("JWT_SECRET") ?? "YourSuperSecretKeyForJWTTokenGeneration123456789";

@@ -12,7 +12,7 @@ export interface Room {
   capacity: number;
   location?: string;
   isAvailable: boolean;
-  pricePerHour?: number;
+
   createdAt: string;
   updatedAt?: string;
 }
@@ -53,7 +53,7 @@ export interface CreateRoomData {
   capacity: number;
   location?: string;
   isAvailable: boolean;
-  pricePerHour?: number;
+
 }
 
 export interface UpdateRoomData {
@@ -62,7 +62,7 @@ export interface UpdateRoomData {
   capacity?: number;
   location?: string;
   isAvailable?: boolean;
-  pricePerHour?: number;
+
 }
 
 export interface CreateBookingData {

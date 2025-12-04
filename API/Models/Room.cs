@@ -23,8 +23,7 @@ namespace RoomBookingAPI.Models
 
         public bool IsAvailable { get; set; } = true;
 
-        [Column(TypeName = "decimal(10,2)")]
-        public decimal? PricePerHour { get; set; }
+
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 

@@ -16,7 +16,6 @@ const AdminRooms: React.FC = () => {
     capacity: 1,
     location: '',
     isAvailable: true,
-    pricePerHour: 0,
   });
 
   useEffect(() => {
@@ -43,7 +42,6 @@ const AdminRooms: React.FC = () => {
         capacity: room.capacity,
         location: room.location || '',
         isAvailable: room.isAvailable,
-        pricePerHour: room.pricePerHour || 0,
       });
     } else {
       setEditingRoom(null);
@@ -53,7 +51,7 @@ const AdminRooms: React.FC = () => {
         capacity: 1,
         location: '',
         isAvailable: true,
-        pricePerHour: 0,
+
       });
     }
     setShowModal(true);
@@ -149,7 +147,7 @@ const AdminRooms: React.FC = () => {
                   <th className="px-6 py-4 text-left text-sm font-semibold">Name</th>
                   <th className="px-6 py-4 text-left text-sm font-semibold">Location</th>
                   <th className="px-6 py-4 text-left text-sm font-semibold">Capacity</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold">Price/Hour</th>
+
                   <th className="px-6 py-4 text-left text-sm font-semibold">Status</th>
                   <th className="px-6 py-4 text-right text-sm font-semibold">Actions</th>
                 </tr>
@@ -167,7 +165,7 @@ const AdminRooms: React.FC = () => {
                     </td>
                     <td className="px-6 py-4 text-gray-700">{room.location || '-'}</td>
                     <td className="px-6 py-4 text-gray-700">{room.capacity}</td>
-                    <td className="px-6 py-4 text-gray-700">${room.pricePerHour}</td>
+
                     <td className="px-6 py-4">
                       <span
                         className={`badge ${
@@ -271,20 +269,7 @@ const AdminRooms: React.FC = () => {
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Price per Hour ($)
-                    </label>
-                    <input
-                      type="number"
-                      name="pricePerHour"
-                      value={formData.pricePerHour}
-                      onChange={handleChange}
-                      className="input"
-                      min="0"
-                      step="0.01"
-                    />
-                  </div>
+
                 </div>
 
                 <div>

@@ -10,7 +10,7 @@ namespace RoomBookingAPI.DTOs
         public int Capacity { get; set; }
         public string? Location { get; set; }
         public bool IsAvailable { get; set; }
-        public decimal? PricePerHour { get; set; }
+
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
     }
@@ -33,8 +33,7 @@ namespace RoomBookingAPI.DTOs
 
         public bool IsAvailable { get; set; } = true;
 
-        [Range(0, 10000)]
-        public decimal? PricePerHour { get; set; }
+
     }
 
     public class UpdateRoomDto
@@ -53,7 +52,6 @@ namespace RoomBookingAPI.DTOs
 
         public bool? IsAvailable { get; set; }
 
-        [Range(0, 10000)]
-        public decimal? PricePerHour { get; set; }
+
     }
 }

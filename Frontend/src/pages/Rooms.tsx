@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { roomsAPI } from '../services/api';
 import { useNavigate } from 'react-router-dom';
 import type { Room } from '../types';
-import { MapPin, Users, DollarSign, Calendar, Loader2, Search } from 'lucide-react';
+import { MapPin, Users, Calendar, Loader2, Search } from 'lucide-react';
 
 const Rooms: React.FC = () => {
   const [rooms, setRooms] = useState<Room[]>([]);
@@ -141,15 +141,7 @@ const Rooms: React.FC = () => {
                       <MapPin className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
                       <span className="text-sm">{room.location || 'Location not specified'}</span>
                     </div>
-                    <div className="flex items-center text-gray-700">
-                      <DollarSign className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
-                      <span className="text-sm">
-                        <span className="font-semibold text-lg text-blue-600">
-                          ${room.pricePerHour}
-                        </span>
-                        /hour
-                      </span>
-                    </div>
+
                   </div>
 
                   {room.isAvailable && (

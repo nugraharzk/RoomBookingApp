@@ -48,7 +48,7 @@ namespace RoomBookingAPI.Controllers
                     Capacity = r.Capacity,
                     Location = r.Location,
                     IsAvailable = r.IsAvailable,
-                    PricePerHour = r.PricePerHour,
+
                     CreatedAt = r.CreatedAt,
                     UpdatedAt = r.UpdatedAt
                 })
@@ -90,7 +90,7 @@ namespace RoomBookingAPI.Controllers
                 Capacity = room.Capacity,
                 Location = room.Location,
                 IsAvailable = room.IsAvailable,
-                PricePerHour = room.PricePerHour,
+
                 CreatedAt = room.CreatedAt,
                 UpdatedAt = room.UpdatedAt
             };
@@ -127,7 +127,7 @@ namespace RoomBookingAPI.Controllers
                 Capacity = dto.Capacity,
                 Location = dto.Location,
                 IsAvailable = dto.IsAvailable,
-                PricePerHour = dto.PricePerHour,
+
                 CreatedAt = DateTime.UtcNow
             };
 
@@ -142,7 +142,7 @@ namespace RoomBookingAPI.Controllers
                 Capacity = room.Capacity,
                 Location = room.Location,
                 IsAvailable = room.IsAvailable,
-                PricePerHour = room.PricePerHour,
+
                 CreatedAt = room.CreatedAt,
                 UpdatedAt = room.UpdatedAt
             };
@@ -188,7 +188,7 @@ namespace RoomBookingAPI.Controllers
             if (dto.Capacity.HasValue) room.Capacity = dto.Capacity.Value;
             if (dto.Location != null) room.Location = dto.Location;
             if (dto.IsAvailable.HasValue) room.IsAvailable = dto.IsAvailable.Value;
-            if (dto.PricePerHour.HasValue) room.PricePerHour = dto.PricePerHour.Value;
+
 
             room.UpdatedAt = DateTime.UtcNow;
 

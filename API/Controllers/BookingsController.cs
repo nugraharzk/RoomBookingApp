@@ -74,7 +74,7 @@ namespace RoomBookingAPI.Controllers
                         Capacity = b.Room.Capacity,
                         Location = b.Room.Location,
                         IsAvailable = b.Room.IsAvailable,
-                        PricePerHour = b.Room.PricePerHour
+
                     },
                     User = new UserDto
                     {
@@ -148,7 +148,7 @@ namespace RoomBookingAPI.Controllers
                     Capacity = booking.Room.Capacity,
                     Location = booking.Room.Location,
                     IsAvailable = booking.Room.IsAvailable,
-                    PricePerHour = booking.Room.PricePerHour
+
                 },
                 User = new UserDto
                 {
@@ -250,7 +250,7 @@ namespace RoomBookingAPI.Controllers
                     Capacity = booking.Room.Capacity,
                     Location = booking.Room.Location,
                     IsAvailable = booking.Room.IsAvailable,
-                    PricePerHour = booking.Room.PricePerHour
+
                 },
                 User = new UserDto
                 {

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import PrivateRoute from "./components/PrivateRoute";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -13,44 +13,48 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-          <Navbar />
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route
-              path="/"
-              element={
-                <PrivateRoute>
-                  <Rooms />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/bookings"
-              element={
-                <PrivateRoute>
-                  <Bookings />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/bookings/create"
-              element={
-                <PrivateRoute>
-                  <CreateBooking />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/admin/rooms"
-              element={
-                <PrivateRoute adminOnly>
-                  <AdminRooms />
-                </PrivateRoute>
-              }
-            />
-          </Routes>
+        <div className="flex h-screen bg-gray-50 overflow-hidden">
+          <Sidebar />
+          <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+            <main className="flex-1 overflow-y-auto p-4 md:p-8">
+              <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route
+                  path="/"
+                  element={
+                    <PrivateRoute>
+                      <Rooms />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/bookings"
+                  element={
+                    <PrivateRoute>
+                      <Bookings />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/bookings/create"
+                  element={
+                    <PrivateRoute>
+                      <CreateBooking />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/admin/rooms"
+                  element={
+                    <PrivateRoute adminOnly>
+                      <AdminRooms />
+                    </PrivateRoute>
+                  }
+                />
+              </Routes>
+            </main>
+          </div>
         </div>
       </AuthProvider>
     </Router>

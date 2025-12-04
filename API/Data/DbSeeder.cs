@@ -62,7 +62,6 @@ namespace RoomBookingAPI.Data
                         Capacity = 20,
                         Location = "1st Floor, East Wing",
                         IsAvailable = true,
-                        PricePerHour = 50.00m,
                         CreatedAt = DateTime.UtcNow
                     },
                     new Room
@@ -72,7 +71,7 @@ namespace RoomBookingAPI.Data
                         Capacity = 8,
                         Location = "2nd Floor, West Wing",
                         IsAvailable = true,
-                        PricePerHour = 30.00m,
+
                         CreatedAt = DateTime.UtcNow
                     },
                     new Room
@@ -82,7 +81,7 @@ namespace RoomBookingAPI.Data
                         Capacity = 15,
                         Location = "3rd Floor, Center",
                         IsAvailable = true,
-                        PricePerHour = 75.00m,
+
                         CreatedAt = DateTime.UtcNow
                     },
                     new Room
@@ -92,7 +91,7 @@ namespace RoomBookingAPI.Data
                         Capacity = 30,
                         Location = "1st Floor, West Wing",
                         IsAvailable = true,
-                        PricePerHour = 60.00m,
+
                         CreatedAt = DateTime.UtcNow
                     },
                     new Room
@@ -102,7 +101,7 @@ namespace RoomBookingAPI.Data
                         Capacity = 4,
                         Location = "2nd Floor, East Wing",
                         IsAvailable = true,
-                        PricePerHour = 20.00m,
+
                         CreatedAt = DateTime.UtcNow
                     }
                 };
